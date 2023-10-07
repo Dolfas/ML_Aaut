@@ -205,8 +205,8 @@ def prediction_ridge(x,y, fit_intercept_bool, xtest):
 # Entrega
 y_test_model0_gm=prediction_ridge(X_train_model0_xy_gm,y_train_model0_xy_gm,True, X_test)
 y_test_model1_gm=prediction_ridge(X_train_model1_xy_gm,y_train_model1_xy_gm,True, X_test)
-prediction = np.transpose(np.vstack((y_test_model0_gm,y_test_model1_gm)))
-np.save('prediction_100123_100260_4.2',prediction)
+prediction = np.hstack((y_test_model0_gm,y_test_model1_gm))
+np.save('MLprediction_100123_100260_4.2',prediction)
 
 # **Anexos**
 
